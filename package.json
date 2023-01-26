@@ -1,0 +1,28 @@
+{
+  "name": "te-contracts",
+  "version": "1.0.0",
+  "description": "Solidity code to create, extend, manage and qualify on-chain tools",      
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "url": "git+https://github.com/techenterprises/solidity.git"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "contracts",
+    "smart-contracts",
+    "blockchain",
+    "eth",
+    "ether",
+    "dao",
+  ],
+  "author": "Tech Enterprises Association of Maine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/techenterprises/solidity/issues"
+  },
+  "homepage": "https://github.com/techenterprises/solidity#readme"
+}
