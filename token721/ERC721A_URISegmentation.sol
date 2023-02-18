@@ -7,6 +7,14 @@ import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/ma
 bytes32 public constant URI_ROLE = keccak256("URI_ROLE");
 
 abstract contract ERC721A_URISegmentation is AccessControl {
+
+    struct uriHelper {
+        uint256 upperLimit;
+        string uri;
+    }
+    
+    mapping(uint256 => uriHelper) internal uriMap;
+
     function tokenURI(uint256 _tokenId) public view virtual override(ERC721A, IERC721A) returns (string memory) {
         if (!_exists(_tokenId)) revert URIQueryForNonexistentToken();
         return bytes(_baseURI(_tokenId)).length != 0 ? string(abi.encodePacked(_baseURI(_tokenId), "/", _toString(_tokenId))) : '';
