@@ -24,6 +24,6 @@
 
 5) Alice wants to swap some of Token A for Token B, so she calls the swap function on the pool contract, passing in the amount of Token A she wants to swap, the amount of Token B she expects to receive, and the tick position where she wants the swap to occur.
 
-5 a) The swap is executed, and Alice receives the desired amount of Token B in exchange for her Token A.
+- The swap is executed, and Alice receives the desired amount of Token B in exchange for her Token A.
 
-5 b) Bob and Alice can continue to perform swaps on the Uniswap V3 pool as desired.
+- Bob and Alice can continue to perform swaps on the Uniswap V3 pool as desired.
