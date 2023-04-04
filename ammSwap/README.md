@@ -4,13 +4,11 @@
 
 1) Deploy the Uniswap V3 Factory contract: The UniswapV3Factory contract is responsible for deploying new Uniswap V3 pools. You can deploy this contract using a tool like Remix or Hardhat. Once the contract is deployed, you'll need to take note of its contract address.
 
-2) Deploy the Uniswap V3 Pool Deployer contract: The UniswapV3PoolDeployer contract is used to deploy new Uniswap V3 pools. You can deploy this contract using a tool like Remix or Hardhat, and you'll need to pass in the address of the UniswapV3Factory contract as a constructor parameter. Once the contract is deployed, you'll need to take note of its contract address.
+2) Deploy a Uniswap V3 pool: To deploy a new Uniswap V3 pool, you'll need to call the createPool function on the UniswapV3Factory contract, passing in the desired token addresses and other parameters such as the initial tick spacing, the fee, and the price range. This will create a new pool, and you'll need to take note of its pool address.
 
-3) Deploy a Uniswap V3 pool: To deploy a new Uniswap V3 pool, you'll need to call the createPool function on the UniswapV3PoolDeployer contract, passing in the desired token addresses and other parameters such as the initial tick spacing, the fee, and the price range. This will create a new pool, and you'll need to take note of its pool address.
+3) Add liquidity to the pool: To test swaps, you'll need to add liquidity to the pool by calling the addLiquidity function on the pool contract, passing in the desired amounts of the two tokens being traded. This will mint new liquidity tokens, which represent your share of the pool.
 
-4) Add liquidity to the pool: To test swaps, you'll need to add liquidity to the pool by calling the addLiquidity function on the pool contract, passing in the desired amounts of the two tokens being traded. This will mint new liquidity tokens, which represent your share of the pool.
-
-5) Perform a swap: To perform a swap, you'll need to call the swap function on the pool contract, passing in the desired input token amount, output token amount, and the position on the price curve where you want the swap to occur. The position is specified as a tick, which represents the price range of the swap.
+4) Perform a swap: To perform a swap, you'll need to call the swap function on the pool contract, passing in the desired input token amount, output token amount, and the position on the price curve where you want the swap to occur. The position is specified as a tick, which represents the price range of the swap.
 
 ### Here's an example of how Bob and Alice can test swaps on a Uniswap V3 pool:
 
