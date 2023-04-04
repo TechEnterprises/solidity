@@ -12,15 +12,13 @@
 
 ### Here's an example of how Bob and Alice can test swaps on a Uniswap V3 pool:
 
-1) Bob deploys the Uniswap V3 Factory contract and takes note of its address.
+1) Bob deploys the Uniswap V3 Factory contract.
 
-2) Bob deploys the Uniswap V3 Pool Deployer contract, passing in the address of the Uniswap V3 Factory contract as a constructor parameter, and takes note of its address.
+2) Bob calls the createPool function on the UniswapV3Factory contract, passing in the addresses of the tokens being traded, the initial tick spacing, the fee, and the price range, and takes note of the pool address.
 
-3) Bob calls the createPool function on the Uniswap V3 Pool Deployer contract, passing in the addresses of the tokens being traded, the initial tick spacing, the fee, and the price range, and takes note of the pool address.
+3) Bob adds liquidity to the pool by calling the addLiquidity function on the pool contract, passing in the desired amounts of the two tokens being traded, and receives liquidity tokens in return.
 
-4) Bob adds liquidity to the pool by calling the addLiquidity function on the pool contract, passing in the desired amounts of the two tokens being traded, and receives liquidity tokens in return.
-
-5) Alice wants to swap some of Token A for Token B, so she calls the swap function on the pool contract, passing in the amount of Token A she wants to swap, the amount of Token B she expects to receive, and the tick position where she wants the swap to occur.
+4) Alice wants to swap some of Token A for Token B, so she calls the swap function on the pool contract, passing in the amount of Token A she wants to swap, the amount of Token B she expects to receive, and the tick position where she wants the swap to occur.
 
 - The swap is executed, and Alice receives the desired amount of Token B in exchange for her Token A.
 
