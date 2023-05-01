@@ -2,17 +2,17 @@
 pragma solidity 0.8.17;
 import "./BrandManagement.sol";
 import "./interface/IERC1155Subletting.sol";
-import "./ERC1155SubletPermissions.sol";
+import "./SubletControlUpgradeable.sol";
 
 /// @author TechEnterprises
 
 /**
  *  @title   ERC1155BrandManagement
- *  @dev     This contracts provides extending-contracts with role-based access control 
+ *  @dev     This contracts provides extending thirdweb contracts with role-based access control 
  *           mechanisms BY THE TOKEN_ID! This allows subletting of the contract to third-parties.
  *           Also provides interfaces to view all members with a given role, and total count of members.
  */
-abstract contract ERC1155Subletting is IERC1155Subletting, ERC1155SubletPermissions {
+abstract contract SubletPermissionsEnumerable is IERC1155Subletting, SubletControlupgradeable {
     /**
      *  @notice A data structure to store data of members for a given role.
      *
