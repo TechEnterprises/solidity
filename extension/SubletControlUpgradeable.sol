@@ -5,7 +5,7 @@ import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol"
 
 abstract contract SubletControlUpgradeable is Initializable, AccessControlUpgradeable {
 
-    // intended to allow the bytes32 _role of ACU to also hold the uint128 tokenAddress of a 721 or 1155 contract
+    // intended to allow the bytes32 _role of ACU to integrate the uint128 tokenId of a 721, 721A or 1155 contract
 
     function stringToBytes16(string memory str) internal pure returns (bytes16) {
         bytes memory strBytes = bytes(str);
