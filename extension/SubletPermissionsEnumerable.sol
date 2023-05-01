@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity 0.8.17;
-import "./ERC1155BrandManagement.sol";
+import "./BrandManagement.sol";
 import "./interface/IERC1155Subletting.sol";
 import "./ERC1155SubletPermissions.sol";
 
