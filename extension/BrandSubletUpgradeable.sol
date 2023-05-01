@@ -3,7 +3,7 @@ pragma solidity ^0.8.18;
 
 import "./SubletControlUpgradeable.sol";
 
-contract BrandingSubletUpgradeable is Initializable, AccessControlUpgradeable, SubletControlUpgradeable {
+contract BrandSubletUpgradeable is Initializable, AccessControlUpgradeable, SubletControlUpgradeable {
     // must be declared
     uint128 brandFee;
 
