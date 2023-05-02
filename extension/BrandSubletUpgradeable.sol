@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
+
+// add events and comments
 import "./SubletControlUpgradeable.sol";
 
-contract BrandSubletUpgradeable is Initializable, AccessControlUpgradeable, SubletControlUpgradeable {
+contract BrandingSubletUpgradeable is SubletControlUpgradeable {
     // must be declared
     uint128 brandFee;
 
@@ -62,8 +64,8 @@ contract BrandSubletUpgradeable is Initializable, AccessControlUpgradeable, Subl
     } 
 
     function transferAndRenounceBrandAdmin(uint128 _brandId, address _newOwner) public onlyBrandAdmin(_brandId) {
-        _setupRole(getRole(nextBrandId, "BRAND_ADMIN"), _newOwner);
-        renounceRole(getRole(nextBrandId, "BRAND_ADMIN"), msg.sender);
+        _setupRole(getRole(_brandId, "BRAND_ADMIN"), _newOwner);
+        renounceRole(getRole(_brandId, "BRAND_ADMIN"), msg.sender);
         // MUST trigger event (i think is does with renouncRole()
     }
 }
