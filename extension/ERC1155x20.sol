@@ -8,10 +8,11 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 abstract contract ERC20Extended is IERC20, ERC1155Supply {
     // should we make a constant for the tokenID to be the 20? (potentially a DAO that splits into diff tokenIDs?)
     mapping(address => mapping(address => uint256)) private _allowances;
-    constructor() {}
-
-// events
-// 
+    // make this a struct and we could make every tokenId act like a 20, perhaps for DAOs or DEX shares
+    string public name;
+    string public symbol;
+    uint256 public initialSupply;
+    
     function totalSupply() external view returns (uint256) {return totalSupply(0);}
 
     function balanceOf(address account) external view returns (uint256) {return ERC1155.balanceOf(account, 0);}
